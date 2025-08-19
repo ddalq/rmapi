@@ -70,6 +70,7 @@ func RunShell(apiCtx api.ApiCtx, userInfo *api.UserInfo, args []string) error {
 	shell.AddCmd(nukeCmd(ctx))
 	shell.AddCmd(accountCmd(ctx))
 	shell.AddCmd(refreshCmd(ctx))
+	shell.AddCmd(authinfoCmd(ctx))
 
 	setCustomCompleter(shell)
 
